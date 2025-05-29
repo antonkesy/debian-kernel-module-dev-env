@@ -7,3 +7,4 @@
 *.symvers
 *.order
 .cache
+compile_commands.json

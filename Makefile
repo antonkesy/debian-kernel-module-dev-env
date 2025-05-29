@@ -1,5 +1,6 @@
 .PHONY:
 	dependencies
+	compile-commands
 	install
 	remove
 	status
@@ -13,7 +14,10 @@
 	led_blink_params
 
 dependencies:
-	apt-get install -y build-essential dkms kmod linux-headers-$$(uname -r) linux-source
+	apt-get install -y build-essential dkms kmod linux-headers-$$(uname -r) linux-source bear
+
+compile-commands:
+	cd ./mydriver && make clean && bear -- make
 
 install: remove
 	mkdir -p /usr/src/mydriver-1.0
