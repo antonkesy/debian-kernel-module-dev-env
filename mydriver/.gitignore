@@ -1,0 +1,11 @@
+*.cmd
+*.mod
+*.mod.c
+*.mod.o
+*.ko
+*.o
+*.symvers
+*.order
+.cache
+
+compile_commands.json
